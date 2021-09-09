@@ -6,26 +6,29 @@ namespace Assignment0
     {
         public static void Main(string[] args)
         {
-            bool y = false;
-            int x = 4;
-            if(x == (int)x)
+            Console.WriteLine("Writes something and press [Enter]");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (isLeapYear(number))
             {
-                y = true;
+                Console.WriteLine("yay");
             }
-            Console.WriteLine(y);
+            else
+            {
+                Console.WriteLine("nay");
+            }
         }
-    
-        public static bool isLeapYear(int year){
+        public static bool isLeapYear(int year)
+        {
             bool isLeapYear = false;
-            if(year % 4 == 0) 
-            {   
+            if (year % 4 == 0)
+            {
                 isLeapYear = true;
-                if(year % 100 == 0)
+                if (year % 100 == 0)
                 {
                     isLeapYear = false;
                 }
             }
-            if(year % 400 == 0)
+            if (year % 400 == 0)
             {
                 isLeapYear = true;
             }
