@@ -1,0 +1,12 @@
+UNHANDLED EXCEPTIONS FROM PROCESS 47313:
+=====================
+10-09-2021 13:01:11
+System.UnauthorizedAccessException: Access to the path is denied.
+  at System.IO.Directory.InsecureGetCurrentDirectory () [0x00010] in <b18e5763ec3f41e68a8fe16d7f5e0bee>:0 
+  at System.Environment.get_CurrentDirectory () [0x00000] in <b18e5763ec3f41e68a8fe16d7f5e0bee>:0 
+  at System.IO.Directory.GetCurrentDirectory () [0x00000] in <b18e5763ec3f41e68a8fe16d7f5e0bee>:0 
+  at Microsoft.Build.Shared.NativeMethodsShared.GetCurrentDirectory () [0x00028] in <b4b09af6266d4115b1fc364f35036db6>:0 
+  at Microsoft.Build.BackEnd.InProcNode.HandleNodeConfiguration (Microsoft.Build.BackEnd.NodeConfiguration configuration) [0x0002b] in <b4b09af6266d4115b1fc364f35036db6>:0 
+  at Microsoft.Build.BackEnd.InProcNode.HandlePacket (Microsoft.Build.BackEnd.INodePacket packet) [0x00068] in <b4b09af6266d4115b1fc364f35036db6>:0 
+  at Microsoft.Build.BackEnd.InProcNode.Run (System.Exception& shutdownException) [0x00088] in <b4b09af6266d4115b1fc364f35036db6>:0 
+===================
