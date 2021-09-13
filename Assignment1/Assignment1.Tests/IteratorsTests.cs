@@ -18,5 +18,23 @@ namespace Assignment1.Tests
 
             Assert.Equal(expected, actual);
         } 
+
+        [Fact]
+        public void Filter_return_even_numbers()
+        {
+            var list = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            Predicate<int> isEven = Even;
+
+            var actual = Iterators.Filter(list, isEven);
+            var expected = new List<int>() {2, 4, 6, 8, 10};
+
+            Assert.Equal(expected, actual);
+
+
+            bool Even(int i)
+            {
+                return i % 2 == 0;
+            }
+        }
     }
 }
