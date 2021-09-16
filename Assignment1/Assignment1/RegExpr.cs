@@ -41,13 +41,13 @@ namespace Assignment1
 
         public static IEnumerable<string> InnerText(string html, string tag)
         {
-            string outerPattern = @"(?<=<" + tag + ")(?:[^>]*>)([\\w\\s\\d<>()/.,]*)(?=</" + tag + ">)";
+            string outerPattern = @"(?<=<(" +  tag + "))(?:[^>]*>)([\\w\\s\\d<>()/.,]*)(?=</\\1>)";
             Regex regex = new Regex(outerPattern);
             string replacePattern = @"</?[\w\d\s]*>";
             
             foreach (Match match in regex.Matches(html))
             {  
-                string result = Regex.Replace(match.Groups[1].Value, replacePattern, "");
+                string result = Regex.Replace(match.Groups[2].Value, replacePattern, "");
                 yield return result;
             }
         }
