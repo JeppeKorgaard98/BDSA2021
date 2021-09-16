@@ -39,12 +39,5 @@ namespace Assignment1
             }
         }
 
-        public static IEnumerable<string> InnerText(string html, string tag)
-        {
-            string pattern = @"(?<=<" + tag + ">)(.*)(?=</" + tag + ">)";
-
-
-
-        }
     }
 }
